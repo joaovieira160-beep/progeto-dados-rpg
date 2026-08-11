@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dados online</title>
+</head>
+<body>
+    <style>
+        
+        body{
+            background-color: rgb(247, 62, 62);
+        }
+        
+    .dado{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    
+    }
+    img{
+        width: 320px;
+    }
+
+    .texto{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .exemplo{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        background-color: #a19a9a;
+        width: 600px;
+        height: 60px;
+        margin: 30px auto;
+    }
+
+    .botao{
+        display: block;
+        margin: 30px auto;
+    }
+
+    .resultado{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .numero{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    z-index: 1;
+    font-size: 50px;
+    }
+    </style>
+    
+
+    <div class="texto">
+        <h1>Role um d6 online!</h1>
+    </div>
+
+ <div class="exemplo">
+        <h2>CLIQUE EM “ROLL” PARA GIRAR O DADO!</h2>
+    </div>
+
+
+    <div class="dado">
+
+        <img src="assets/imgs/d6-certo.png" alt="dado">
+
+        <div class="numero">
+        <h2 id="numero">-</h2>
+    </div>
+    </div>
+
+
+    <div class="resultado">
+        <h1 id="resultado"> resultado: </h1>
+    </div>
+
+    <button onclick="rolar()" class="botao">
+        <img src="assets/imgs/rool.png" alt="roll">
+    </button>
+
+
+
+<script>
+    function rolar(){
+        const numero = Math.floor(Math.random() * 6) + 1
+
+        document.getElementById("resultado").textContent =
+        "Resultado: " + numero;
+
+    document.getElementById("numero").textContent = numero;
+    }
+
+</script>
+
+</body>
+</html>
+

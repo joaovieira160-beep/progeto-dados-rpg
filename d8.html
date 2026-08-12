@@ -9,14 +9,14 @@
     <style>
         
         body{
-            background-color: rgb(247, 62, 62);
+            background-color: rgb(1, 88, 146);
         }
         
     .dado{
         display: flex;
         justify-content: center;
         align-self: center;
-    
+
     }
     img{
         width: 320px;
@@ -32,7 +32,7 @@
         display: flex;
         justify-content: center;
         align-self: center;
-        background-color: #a19a9a;
+        background-color: #5CA5E9;
         width: 600px;
         height: 60px;
         margin: 30px auto;
@@ -58,18 +58,11 @@
     z-index: 1;
     font-size: 50px;
     }
-
-    .botao-voltar {
-    border: 2px solid black;
-    margin-left: auto;
-    margin-right: auto;
-}
     </style>
     
 
     <div class="texto">
-        <h1>Role um d4 online!</h1>
-    
+        <h1>Role um d8 online!</h1>
     </div>
 
  <div class="exemplo">
@@ -79,20 +72,12 @@
 
     <div class="dado">
 
-        <img src="assets/imgs/d4(melhorado).png" alt="dado">
+        <img src="assets/imgs/d8(melhorado).png" alt="dado">
 
         <div class="numero">
         <h2 id="numero">-</h2>
     </div>
     </div>
-
-    
-    <a href="../inicio.html">
-
-    <div class="botao-voltar">
-        Voltar para o início
-    </div>
-</a>
 
 
     <div class="resultado">
@@ -107,14 +92,13 @@
 
 <script>
     function rolar(){
-        const numero = Math.floor(Math.random() * 4) + 1
+        const numero = Math.floor(Math.random() * 8) + 1
 
         document.getElementById("resultado").textContent =
         "Resultado: " + numero;
 
     document.getElementById("numero").textContent = numero;
     }
-
 
 </script>
 

@@ -9,7 +9,7 @@
     <style>
         
         body{
-            background-color: rgb(247, 62, 62);
+            background-image: url("assets/imgs/Captura\ de\ tela\ 2026-08-13\ 140206.png");
         }
         
     .dado{
@@ -19,7 +19,7 @@
     position: relative;
     }
     img{
-        width: 320px;
+        width: 300px;
     }
 
     .texto{
@@ -111,13 +111,28 @@
 
 <script>
     function rolar(){
-        const numero = Math.floor(Math.random() * 4) + 1
+    
+    const elemento = document.getElementById("numero");
 
-        document.getElementById("resultado").textContent =
-        "Resultado: " + numero;
+    let contador = 0;
 
-    document.getElementById("numero").textContent = numero;
-    }
+    const intervalo = setInterval(() => {
+        
+        elemento.textContent = Math.floor(Math.random() * 100) + 1;
+
+        contador++;
+
+        
+        if (contador >= 50) {
+            clearInterval(intervalo);
+
+            
+            elemento.textContent = Math.floor(Math.random() * 4) + 1;
+        }
+    }, 20);
+}
+        
+    
 
 
 </script>

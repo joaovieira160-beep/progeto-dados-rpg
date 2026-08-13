@@ -13,35 +13,42 @@
         }
         .dados {
             display: flex;
-            gap: 60px;
+            gap: 70px;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
         }
 
         .card {
-            width: 150px;
-            text-align: center;
+            width: 160px;
+            text-align:center;
+            
         }
 
         .card img {
             width: 200px;
             height: 200px;
             object-fit: contain;
-    
-           
         }
+        .card img:hover {
+    transform: scale(1.2);
+    transition-duration: 1s;
+}
 
         .card a {
             text-decoration: none;
             color: black;
         }
+        
+    
+
+        
     </style>
 </head>
 
 <body>
 
-    <h1>- escolha um dado! -</h1>
+    <h1><strong>- escolha um dado! -</strong></h1>
 
     <hr>
     <div class="dados">

@@ -26,6 +26,7 @@
         display: flex;
         justify-content: center;
         align-self: center;
+        
     }
 
     .exemplo{
@@ -44,6 +45,7 @@
         cursor: pointer;
     }
 
+
     .resultado{
         display: flex;
         justify-content: center;
@@ -61,11 +63,18 @@
     }
 
     .botao-voltar {
-    border: 2px solid black;
-    background-color: #a19a9a;
-    width: 200px;
-    height: 50px;
-    font-size: 25px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.botao-voltar:hover {
+    background-color: #8817d3;
+    transform: scale(1.1) ;
+    transition-duration: 1s;
 }
     </style>
     
